@@ -15,12 +15,18 @@ var uppercase = confirm("Include uppercase characters?")
 var numeric = confirm("Include numeric characters?")
 var specialChars = confirm("Include special characters?")
 
+// set prompt to ensure user selects one or more different characters
+if (!lowercase && !uppercase && !numeric && !specialChars) {
+  alert("Please select at least one character type.");
+  return "";
+}
 
 // added valid characters to generate password
 var lowercaseChars = "abcdefghijklmnopqrstuvwxyz"
 var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var numericChars = "0123456789"
 var specialChars = "!@#$%^&*()_+[]{}|;:,.<>?"
+
 
 }
 
