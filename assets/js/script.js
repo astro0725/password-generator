@@ -28,6 +28,21 @@ var numericChars = "0123456789"
 var specialChars = "!@#$%^&*()_+[]{}|;:,.<>?"
 
 
+// uses variables for vali characters and aggregates the selected type into a single string for password generation
+var selectedChars = ""
+if (lowercase) selectedChars += lowercaseChars
+if (uppercase) selectedChars += uppercaseChars
+if (numeric) selectedChars += numericChars
+if (specialChars) selectedChars += specialChars
+
+// this initializes the empty string to hold the generated password
+var generatedPassword = ""
+// starts a loop that will run until it equals the desired lenght
+for (var i = 0; i < length; i++) {
+  // generates a random index to pick a character from the selected character
+    var randomIndex = Math.floor(Math.random() * selectedChars.length)
+    // adds the character from the random index
+    generatedPassword += selectedChars[randomIndex]
 }
 
 return generatedPassword
