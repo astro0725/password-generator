@@ -10,16 +10,16 @@ function generatePassword() {
       return "";
   }
 
-var lowercase = confirm("Include lowercase characters?")
-var uppercase = confirm("Include uppercase characters?")
-var numeric = confirm("Include numeric characters?")
-var specialChars = confirm("Include special characters?")
+  var includeLowercase = confirm("Include lowercase characters?");
+  var includeUppercase = confirm("Include uppercase characters?");
+  var includeNumeric = confirm("Include numeric characters?");
+  var includeSpecial = confirm("Include special characters?");
 
-// set prompt to ensure user selects one or more different characters
-if (!lowercase && !uppercase && !numeric && !specialChars) {
-  alert("Please select at least one character type.");
-  return "";
-}
+  // asks user if they what kind of characters they want in their password
+  if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
+      alert("Please select at least one character type.");
+      return "";
+  }
 
 // added valid characters to generate password
 var lowercaseChars = "abcdefghijklmnopqrstuvwxyz"
@@ -28,12 +28,12 @@ var numericChars = "0123456789"
 var specialChars = "!@#$%^&*()_+[]{}|;:,.<>?"
 
 
-// uses variables for vali characters and aggregates the selected type into a single string for password generation
-var selectedChars = ""
-if (lowercase) selectedChars += lowercaseChars
-if (uppercase) selectedChars += uppercaseChars
-if (numeric) selectedChars += numericChars
-if (specialChars) selectedChars += specialChars
+// uses variables for valid characters and aggregates the selected type into a single string for password generation
+var selectedChars = "";
+if (includeLowercase) selectedChars += lowercaseChars;
+if (includeUppercase) selectedChars += uppercaseChars;
+if (includeNumeric) selectedChars += numericChars;
+if (includeSpecialChars) selectedChars += specialChars;
 
 // this initializes the empty string to hold the generated password
 var generatedPassword = ""
