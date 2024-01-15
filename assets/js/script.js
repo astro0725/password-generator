@@ -33,7 +33,7 @@ var selectedChars = "";
 if (includeLowercase) selectedChars += lowercaseChars;
 if (includeUppercase) selectedChars += uppercaseChars;
 if (includeNumeric) selectedChars += numericChars;
-if (includeSpecialChars) selectedChars += specialChars;
+if (includeSpecial) selectedChars += specialChars;
 
 // this initializes the empty string to hold the generated password
 var generatedPassword = ""
