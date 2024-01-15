@@ -9,6 +9,14 @@ In this assignment I created a generator that follows average password guideline
 - Choose how many characters you want to generate (8-128)
 - Can customize what type of characters you want to include (i.e. upper and/or lower case letters, as well as numerical and special characters.) 
 - Button seamlessly generates a password that you customize. 
+
+## Usage
+- Visit here: https://astro0725.github.io/password-generator/
+- When you click generate password you will receive a series of prompts:
+    - It will ask you to put in a numerical value for how long you want your password to be
+    - Then it will ask what kind of characters you want in your password. (Any comibination is possible)
+- After you complete the prompts your password will appear in the text box. 
+
 ## Screenshots
 
 ![The Password Generator application displays a red button to "Generate Password".](./assets/images/password-gen.png)
